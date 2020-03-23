@@ -1,3 +1,10 @@
+%%%%% Main %%%%%
+%
+% Plots and run the ant system algorithm for solving the TSP
+%
+% Author: sgalella
+% https://github.com/sgalella
+
 % Clear command window
 clear; clc;
 
