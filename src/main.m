@@ -40,6 +40,8 @@ ylim([0 mapSize])
 xlabel('x', 'FontSize', 15)
 ylabel('y', 'FontSize', 15)
 title('Cities Location', 'FontSize', 20)
+grid on;
+saveas(fig1, '../images/cities_location.jpg');
 
 % Create distance matrix
 [costMatrix, distanceMatrix] = computecostmatrix(locCities);
@@ -81,11 +83,12 @@ for iIteration = 1:nIterations
     end
     
     % Plot path length
-    figure(2)
+    fig2 = figure(2);
     plot(1:iIteration, optimalPathIterations(1:iIteration),'b');
     xlabel('iterations', 'FontSize', 15)
     ylabel('path length', 'FontSize', 15)
     title('Path Convergence', 'FontSize', 20)
+    grid on;
     pause(0.05);
     drawnow;
     
@@ -94,6 +97,7 @@ for iIteration = 1:nIterations
     end
 end
 fprintf("Final Iteration: Best length: %f\n", bestLengthAll);
+saveas(fig2, '../images/path_convergence.jpg');
 
 % Plot final network
 fig3 = figure(3);
@@ -117,6 +121,8 @@ ylim([0 mapSize])
 xlabel('x', 'FontSize', 15)
 ylabel('y', 'FontSize', 15)
 title('Final Network', 'FontSize', 20)
+grid on;
+saveas(fig3, '../images/final_network.jpg');
 
 % Plot the best path
 fig4 = figure(4);
@@ -137,4 +143,5 @@ ylim([0 mapSize])
 xlabel('x', 'FontSize', 15)
 ylabel('y', 'FontSize', 15)
 title('Best Path', 'FontSize', 20)
-
+grid on;
+saveas(fig4, '../images/best_path.jpg');
