@@ -43,7 +43,7 @@ title('Cities Location', 'FontSize', 20)
 grid on;
 ax = gca;
 ax.GridAlpha = 0.3;
-saveas(fig1, '../images/cities_location.jpg');
+saveas(fig1, '../images/cities_location.png');
 
 % Create distance matrix
 [costMatrix, distanceMatrix] = computecostmatrix(locCities);
@@ -101,7 +101,7 @@ for iIteration = 1:nIterations
     end
 end
 fprintf("Final Iteration: Best length: %f\n", bestLengthAll);
-saveas(fig2, '../images/path_convergence.jpg');
+saveas(fig2, '../images/path_convergence.png');
 
 % Plot final network
 fig3 = figure(3);
@@ -128,7 +128,7 @@ title('Final Network', 'FontSize', 20)
 grid on;
 ax = gca;
 ax.GridAlpha = 0.3;
-saveas(fig3, '../images/final_network.jpg');
+saveas(fig3, '../images/final_network.png');
 
 % Plot the best path
 fig4 = figure(4);
@@ -152,4 +152,4 @@ title('Best Path', 'FontSize', 20)
 grid on;
 ax = gca;
 ax.GridAlpha = 0.3;
-saveas(fig4, '../images/best_path.jpg');
+saveas(fig4, '../images/best_path.png');
